@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-for num1 in range(10):
-    for num2 in range(num1 + 1, 10):
-        if num1 < 8:
-            print("{:02d}{:02d}".format(num1, num2), end=", ")
-        else:
-            print("{:02d}{:02d}".format(num1, num2))
+for i in range(10):
+    for j in range(10):
+        if (i != j and i < j) and i < 9:
+            if (i == 8 and j == 9):
+                print('{0}{1}'.format(i, j))
+            else:
+                print('{0}{1}, '.format(i, j), end='')
