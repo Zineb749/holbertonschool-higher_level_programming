@@ -46,11 +46,10 @@ class Square:
             int: The area of the square.
         """
         return self.__size * self.__size
+
     def my_print(self):
-    
         if self.__size == 0:
             print("--")
             return
-    
         for _ in range(self.__size):
             print("#" * self.__size)
