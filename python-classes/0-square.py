@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-class Square:
-    """
-    Represents a square.
+ """ Empty class square that represents a square"""
 
-    This is an empty class, intended for future implementation of
-    square-related functionality.
-    """
+ class Square:
+
+""" Empty class square that represents a square"""
+
     pass
