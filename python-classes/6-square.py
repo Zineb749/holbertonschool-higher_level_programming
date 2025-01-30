@@ -10,12 +10,8 @@ class Square:
 
         Args:
             size (int): The size of the square's side.
-            position (tuple): The position (x, y) for printing.
+            position (tuple): The position (x, y) for printing."""
 
-        Raises:
-            TypeError: If size is not an integer or position is not a tuple of two positive integers.
-            ValueError: If size is negative.
-        """
         self.size = size
         self.position = position
 
