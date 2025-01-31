@@ -1,8 +1,8 @@
-#!/usr/bin/python3
+#!/usr/bin/pyhton3
 
 class Rectangle:
     """
-    A class to represent a rectangle with optional width and height.
+    A class to represent a rectangle.
     """
 
     number_of_instances = 0
