@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 """base geometry class"""
 
 
@@ -6,10 +6,7 @@ class BaseGeometry:
 
     def area(self):
 
-        """empty base geometry class"""
+        """Not implemented"""
 
 
-raise Exception
-
-
-print("area() is not implementeed")
+raise Exception("area() is not implemented")
