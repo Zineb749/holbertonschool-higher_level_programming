@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-"""Improve Geometry"""
+"""basegeometry class"""
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
-class BaseGeometry:
-    """basegeometry class"""
-    def area(self):
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """validate that the value is a positive int"""
-        if not isinstance(value, int):
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+class Rectangle(BaseGeometry):
+    """rectangle class inherit from basegeometry"""
+    def __init__(self, width, height):
+        """initialize width and height"""
+        self.integer_validator('width', width)
+        self.__width = width
+        self.integer_validator('height', height)
+        self.__height = height
