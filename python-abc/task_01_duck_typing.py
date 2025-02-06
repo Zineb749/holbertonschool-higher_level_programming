@@ -1,5 +1,6 @@
-#!/usr/bin/pythn3
+#!/usr/bin/python3
 from abc import ABC, abstractmethod
+import math  # Importing the math module to use math.pi
 
 
 class Shape(ABC):
@@ -25,11 +26,11 @@ class Circle(Shape):
 
     def area(self):
         """Calculate and return the area of the circle."""
-        return 3.14159 * self.radius ** 2
+        return math.pi * self.radius ** 2  # Using math.pi for precision
 
     def perimeter(self):
         """Calculate and return the perimeter (circumference) of the circle."""
-        return 2 * 3.14159 * abs(self.radius)
+        return 2 * math.pi * self.radius  # Using math.pi for precision
 
 
 class Rectangle(Shape):
