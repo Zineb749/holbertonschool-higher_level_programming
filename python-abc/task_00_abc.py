@@ -1,18 +1,30 @@
-#!/usr/bin/python3
 from abc import ABC, abstractmethod
 
 
-class Animal:
+class Animal(ABC):
+    """Abstract base class representing an animal.
+
+    This class enforces that any subclass must implement the `sound` method.
+    """
     @abstractmethod
     def sound(self):
+        """Abstract method that should be implemented by
+        subclasses to define the animal's sound."""
         pass
 
 
-class dog(Animal):
+class Dog(Animal):
+    """Concrete subclass representing a dog.
+
+    Implements the `sound` method to return the sound a dog makes.
+    """
     def sound(self):
         return 'Bark'
 
 
-class cat(Animal):
+class Cat(Animal):
+    """Concrete subclass representing a cat.
+    Implements the `sound` method to return the sound a cat makes.
+    """
     def sound(self):
         return 'Meow'
