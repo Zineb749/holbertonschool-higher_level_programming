@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Shapes, Interfaces, and Duck Typing"""
 from abc import ABC, abstractmethod
-from math import pi
+import math
+
+# Définir la classe abstraite Shape
 
 
 class Shape(ABC):
-    """shape class"""
     @abstractmethod
     def area(self):
         pass
@@ -14,21 +14,23 @@ class Shape(ABC):
     def perimeter(self):
         pass
 
+# Définir la classe Circle qui hérite de Shape
+
 
 class Circle(Shape):
-    """circle class inherited from shape"""
     def __init__(self, radius):
         self.radius = radius
 
     def area(self):
-        return pi * self.radius ** 2
+        return math.pi * (self.radius ** 2)
 
     def perimeter(self):
-        return 2 * pi * self.radius
+        return 2 * math.pi * abs(self.radius)
+
+# Définir la classe Rectangle qui hérite de Shape
 
 
 class Rectangle(Shape):
-    """rectangle class inherited from shape"""
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -39,10 +41,9 @@ class Rectangle(Shape):
     def perimeter(self):
         return 2 * (self.width + self.height)
 
+# Définir la fonction shape_info
+
 
 def shape_info(shape):
-    """function that prints the area and perimeter"""
-    area = shape.area()
-    perimeter = shape.perimeter()
-    print("Area: {}".format(area))
-    print("Perimeter: {}".format(perimeter))
+    print(f"Area: {shape.area()}")
+    print(f"Perimeter: {shape.perimeter()}")
