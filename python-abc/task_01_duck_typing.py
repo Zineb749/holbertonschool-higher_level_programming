@@ -29,7 +29,7 @@ class Circle(Shape):
 
     def perimeter(self):
         """Calculate and return the perimeter (circumference) of the circle."""
-        return 2 * 3.14159 * self.radius
+        return 2 * 3.14159 * abs(self.radius)
 
 
 class Rectangle(Shape):
