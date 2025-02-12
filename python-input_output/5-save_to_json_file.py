@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"saves object to json file"
+"""saves object to json file"""
 import json
 
 
