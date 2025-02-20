@@ -1,11 +1,20 @@
-#!/usr/bin/python3
-"""creates an object from json file"""
-import json
+import sys
+import os
+from pathlib import Path
 
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-def load_from_json_file(filename):
-    """creates an object from a json file"""
+filename = "add_item.json"
 
-    with open(filename, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    return data
+if Path(filename).exists():
+    items = load_from_json_file(filename)
+else:
+    items = []
+
+# Add command-line arguments (excluding script name) to the list
+items.extend(sys.argv[1:])
+
+# Save the updated list to the file
+save_to_json_file(items, filename)
+
