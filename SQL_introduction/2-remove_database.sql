@@ -1,3 +1,3 @@
 -- 2. deletes a database
-DROP hbtn_0c_0;
+DROP IF EXITS hbtn_0c_0;
 
